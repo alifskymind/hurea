@@ -11,7 +11,7 @@ export default function Hero() {
 
     <div className="hero-content text-center text-neutral-content">
 
-      <div className="max-w-md">
+      <div className="max-w-md space-x-2">
 
         {/* title */}
         <h1 className="mb-5 text-5xl font-bold">Hurea</h1>

@@ -50,7 +50,7 @@ export default function Login() {
 
                     </div>
 
-                    <div class="form-control mt-6">
+                    <div class="max-w-md space-x-2">
 
                         {/* temporary button to go to table page */}
                         <Link href="/tableOriginalPage" passHref>
@@ -58,8 +58,6 @@ export default function Login() {
                             <button class="btn btn-primary">Login</button>
 
                         </Link>
-
-
 
                         {/* button to go to home page */}
                         <Link href="/" passHref>
