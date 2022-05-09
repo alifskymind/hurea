@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/chartCustomDataPage": [
+    "/chartOriginalPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/chartCustomDataPage.js"
+      "static/chunks/pages/chartOriginalPage.js"
     ],
     "/tableOriginalPage": [
       "static/chunks/webpack.js",
