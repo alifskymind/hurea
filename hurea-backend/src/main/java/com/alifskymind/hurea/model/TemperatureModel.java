@@ -10,8 +10,8 @@ public class TemperatureModel {
 	private Long id;
 	private String deviceUUID;
 	private Integer dataType;
-	private Timestamp unixTimestamp;
-	private LocalDateTime dateTime;
+	private Long unixTimestamp;
+	private String dateTime;
 	private Double temperatureInC;
 
 	// constructors
@@ -19,7 +19,7 @@ public class TemperatureModel {
 	public TemperatureModel() {
 	}
 
-	public TemperatureModel(Long id, String deviceUUID, Integer dataType, Timestamp unixTimestamp, LocalDateTime dateTime, Double temperatureInC) {
+	public TemperatureModel(Long id, String deviceUUID, Integer dataType, Long unixTimestamp, String dateTime, Double temperatureInC) {
 		this.id = id;
 		this.deviceUUID = deviceUUID;
 		this.dataType = dataType;
@@ -54,19 +54,19 @@ public class TemperatureModel {
 		this.dataType = dataType;
 	}
 
-	public Timestamp getUnixTimestamp() {
+	public Long getUnixTimestamp() {
 		return unixTimestamp;
 	}
 
-	public void setUnixTimestamp(Timestamp unixTimestamp) {
+	public void setUnixTimestamp(Long unixTimestamp) {
 		this.unixTimestamp = unixTimestamp;
 	}
 
-	public LocalDateTime getDateTime() {
+	public String getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(LocalDateTime dateTime) {
+	public void setDateTime(String dateTime) {
 		this.dateTime = dateTime;
 	}
 

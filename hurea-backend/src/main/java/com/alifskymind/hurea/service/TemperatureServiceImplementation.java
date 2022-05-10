@@ -1,11 +1,8 @@
 package com.alifskymind.hurea.service;
 
 import com.alifskymind.hurea.entity.TemperatureEntity;
-import com.alifskymind.hurea.entity.UserEntity;
 import com.alifskymind.hurea.model.TemperatureModel;
-import com.alifskymind.hurea.model.UserModel;
 import com.alifskymind.hurea.repository.TemperatureRepository;
-import com.alifskymind.hurea.repository.UserRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 

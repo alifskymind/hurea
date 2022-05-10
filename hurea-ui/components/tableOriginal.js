@@ -1,55 +1,79 @@
-import React from "react"
+import { React, useState, useEffect } from "react";
 
-export default function TableOriginal() {
-  return (
+// test calling rest api
+const TableOriginal = ({ temperature }) => {
 
-    <div className="overflow-x-auto">
+    // default attributes for rest api calls
+    const TEMPERATURE_API_BASE_URL = "http://localhost:8080/api/v1/temperatures";
+    const [temperatures, setTemperatures] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [temperatureId, setTemperatureId] = useState(null);
+    const [responseTemperature, setResponseTemperature] = useState(null);
 
-        <table className="table table-zebra w-full">
+    // get method using useEffect
+    useEffect(() => {
+      const fetchData = async () => {
+        setLoading(true);
+        try {
+          const response = await fetch(TEMPERATURE_API_BASE_URL, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+          const temperatures = await response.json();
+          setTemperatures(temperatures);
+        } catch (error) {
+          console.log(error);
+        }
+        setLoading(false);
+      };
+      fetchData();
+    }, [temperature, responseTemperature]);
 
-          {/* head */}
-          <thead>
-            <tr>
-              <th />
-              <th>Device UUID</th>
-              <th>Data Type</th>
-              <th>Unix Timestamp</th>
-              <th>Date Time</th>
-              <th>Temperature in Celcius</th>
-            </tr>
-          </thead>
+    // view to show
+    return (
 
-          <tbody>
+        <div>
 
-            {/* row 1 */}
-            {/* <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
-            </tr> */}
+            {/* test show on table */}
+            <div class="overflow-x-auto">
 
-            {/* row 2 */}
-            {/* <tr>
-              <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
-            </tr> */}
+                <table class="table w-full">
 
-            {/* row 3 */}
-            {/* <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr> */}
+                    {/* header */}
+                    <thead>
+                        <tr>
+                            <th>Device UUID</th>
+                            <th>Data Type</th>
+                            <th>Unix Timestamp</th>
+                            <th>Date Time</th>
+                            <th>Temperature in Celcius</th>
+                        </tr>
+                    </thead>
 
-          </tbody>
+                    {/* data */}
+                    <tbody>
 
-        </table>
+                    {temperatures?.map(temperature => (
+                        <tr key={temperature.id}>
+                            <td>{temperature.deviceUUID}</td>
+                            <td>{temperature.dataType}</td>
+                            <td>{temperature.unixTimestamp}</td>
+                            <td>{temperature.dateTime}</td>
+                            <td>{temperature.temperatureInC}</td>
+                        </tr>
+                    ))}
 
-    </div>
+                    </tbody>
 
-  )
-}
+                </table>
+
+            </div>
+
+        </div>
+
+    );
+};
+
+  export default TableOriginal;

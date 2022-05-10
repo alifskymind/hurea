@@ -23,11 +23,11 @@ public class TemperatureEntity {
 
 	@Column(name = "unix_timestamp")
 	//private Timestamp unixTimestamp;
-	private Timestamp unixTimestamp;
+	private Long unixTimestamp;
 
 	@Column(name = "date_time")
 	//private LocalDateTime dateTime;
-	private LocalDateTime dateTime;
+	private String dateTime;
 
 	@Column(name = "temperature_in_c")
 	private Double temperatureInC;
@@ -37,7 +37,7 @@ public class TemperatureEntity {
 	public TemperatureEntity() {
 	}
 
-	public TemperatureEntity(Long id, String deviceUUID, Integer dataType, Timestamp unixTimestamp, LocalDateTime dateTime, Double temperatureInC) {
+	public TemperatureEntity(Long id, String deviceUUID, Integer dataType, Long unixTimestamp, String dateTime, Double temperatureInC) {
 		this.id = id;
 		this.deviceUUID = deviceUUID;
 		this.dataType = dataType;
@@ -72,19 +72,19 @@ public class TemperatureEntity {
 		this.dataType = dataType;
 	}
 
-	public Timestamp getUnixTimestamp() {
+	public Long getUnixTimestamp() {
 		return unixTimestamp;
 	}
 
-	public void setUnixTimestamp(Timestamp unixTimestamp) {
+	public void setUnixTimestamp(Long unixTimestamp) {
 		this.unixTimestamp = unixTimestamp;
 	}
 
-	public LocalDateTime getDateTime() {
+	public String getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(LocalDateTime dateTime) {
+	public void setDateTime(String dateTime) {
 		this.dateTime = dateTime;
 	}
 

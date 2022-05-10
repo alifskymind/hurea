@@ -1,11 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/customPredictionsPage": "pages/customPredictionsPage.js",
-  "/chartPredictedPage": "pages/chartPredictedPage.js",
-  "/chartCustomDataPage": "pages/chartCustomDataPage.js",
-  "/insertCustomDataPage": "pages/insertCustomDataPage.js",
-  "/tablePredictedPage": "pages/tablePredictedPage.js",
-  "/chartOriginalPage": "pages/chartOriginalPage.js"
+  "/_document": "pages/_document.js"
 }

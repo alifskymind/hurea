@@ -25,40 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/chartCustomDataPage": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/chartCustomDataPage.js"
-    ],
-    "/chartOriginalPage": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/chartOriginalPage.js"
-    ],
-    "/chartPredictedPage": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/chartPredictedPage.js"
-    ],
-    "/customPredictionsPage": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/customPredictionsPage.js"
-    ],
-    "/insertCustomDataPage": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/insertCustomDataPage.js"
-    ],
     "/tableOriginalPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/tableOriginalPage.js"
     ],
-    "/tablePredictedPage": [
+    "/testApiBackendTemperatureTable": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tablePredictedPage.js"
+      "static/chunks/pages/testApiBackendTemperatureTable.js"
     ]
   },
   "ampFirstPages": []
