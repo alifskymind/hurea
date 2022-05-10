@@ -30,6 +30,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/chartCustomDataPage.js"
     ],
+    "/chartOriginalPage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/chartOriginalPage.js"
+    ],
     "/chartPredictedPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -40,10 +45,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/customPredictionsPage.js"
     ],
+    "/insertCustomDataPage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/insertCustomDataPage.js"
+    ],
     "/tableOriginalPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/tableOriginalPage.js"
+    ],
+    "/tablePredictedPage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tablePredictedPage.js"
     ]
   },
   "ampFirstPages": []

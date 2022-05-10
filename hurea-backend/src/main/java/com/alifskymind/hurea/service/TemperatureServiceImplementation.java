@@ -7,10 +7,12 @@ import com.alifskymind.hurea.model.UserModel;
 import com.alifskymind.hurea.repository.TemperatureRepository;
 import com.alifskymind.hurea.repository.UserRepository;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class TemperatureServiceImplementation implements TemperatureService{
 
 	// bind service to repository using constructor

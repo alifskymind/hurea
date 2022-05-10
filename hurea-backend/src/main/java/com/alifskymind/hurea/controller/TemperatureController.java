@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// http://localhost:8080/api/v1/temperatures
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/")
@@ -43,7 +44,6 @@ public class TemperatureController {
 		TemperatureModel temperature = null;
 		temperature = temperatureService.getTemperatureById(id);
 		return ResponseEntity.ok(temperature);
-
 	}
 
 	// put method

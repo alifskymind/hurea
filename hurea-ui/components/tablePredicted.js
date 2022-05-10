@@ -11,8 +11,6 @@ export default function TablePredicted() {
           <thead>
             <tr>
               <th />
-              <th>Device UUID</th>
-              <th>Data Type</th>
               <th>Unix Timestamp</th>
               <th>Date Time</th>
               <th>Temperature in Celcius</th>

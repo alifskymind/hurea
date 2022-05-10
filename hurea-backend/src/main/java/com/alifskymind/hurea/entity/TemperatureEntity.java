@@ -22,9 +22,11 @@ public class TemperatureEntity {
 	private Integer dataType;
 
 	@Column(name = "unix_timestamp")
+	//private Timestamp unixTimestamp;
 	private Timestamp unixTimestamp;
 
 	@Column(name = "date_time")
+	//private LocalDateTime dateTime;
 	private LocalDateTime dateTime;
 
 	@Column(name = "temperature_in_c")

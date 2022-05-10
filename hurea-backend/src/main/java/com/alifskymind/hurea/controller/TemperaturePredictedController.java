@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// http://localhost:8080/api/v1/temperaturesPredicted
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/")
@@ -25,31 +26,30 @@ public class TemperaturePredictedController {
 	}
 
 	// post method
-	@PostMapping("/temperatures")
+	@PostMapping("/temperaturesPredicted")
 	public TemperaturePredictedModel saveTemperature(@RequestBody TemperaturePredictedModel temperature) {
 
 		return temperaturePredictedService.saveTemperature(temperature);
 	}
 
 	// get method all
-	@GetMapping("/temperatures")
+	@GetMapping("/temperaturesPredicted")
 	public List<TemperaturePredictedModel> getAllTemperatures() {
 
 		return temperaturePredictedService.getAllTemperatures();
 	}
 
 	// get method individually
-	@GetMapping("/temperatures/{id}")
+	@GetMapping("/temperaturesPredicted/{id}")
 	public ResponseEntity<TemperaturePredictedModel> getTemperatureById(@PathVariable("id") Long id) {
 
 		TemperaturePredictedModel temperature = null;
 		temperature = temperaturePredictedService.getTemperatureById(id);
 		return ResponseEntity.ok(temperature);
-
 	}
 
 	// put method
-	@PutMapping("/temperatures/{id}")
+	@PutMapping("/temperaturesPredicted/{id}")
 	public ResponseEntity<TemperaturePredictedModel> updateTemperature(@PathVariable("id") Long id, @RequestBody TemperaturePredictedModel temperature) {
 
 		temperature = temperaturePredictedService.updateTemperature(id, temperature);
@@ -57,7 +57,7 @@ public class TemperaturePredictedController {
 	}
 
 	// delete method
-	@DeleteMapping("/temperatures/{id}")
+	@DeleteMapping("/temperaturesPredicted/{id}")
 	public ResponseEntity<Map<String,Boolean>> deleteTemperature(@PathVariable("id") Long id) {
 
 		boolean deleted = false;

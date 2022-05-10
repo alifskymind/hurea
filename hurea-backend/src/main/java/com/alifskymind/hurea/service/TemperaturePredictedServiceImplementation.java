@@ -7,10 +7,12 @@ import com.alifskymind.hurea.model.TemperaturePredictedModel;
 import com.alifskymind.hurea.repository.TemperaturePredictedRepository;
 import com.alifskymind.hurea.repository.TemperatureRepository;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class TemperaturePredictedServiceImplementation implements TemperaturePredictedService {
 
 	// bind service to repository using constructor

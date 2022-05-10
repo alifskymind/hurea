@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// http://localhost:8080/api/v1/users
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/")
