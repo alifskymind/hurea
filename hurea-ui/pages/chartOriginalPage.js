@@ -1,5 +1,7 @@
 import React from "react"
+
 import Navbar from "../components/navbar"
+import ChartOriginal from "../components/chartOriginal"
 
 export default function ChartOriginalPage() {
   return (
@@ -7,6 +9,7 @@ export default function ChartOriginalPage() {
     <div>
 
       <Navbar/>
+      <ChartOriginal/>
 
     </div>
 

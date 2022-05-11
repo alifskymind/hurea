@@ -5,7 +5,7 @@ const TableOriginal = ({ temperature }) => {
 
     // default attributes for rest api calls
     const TEMPERATURE_API_BASE_URL = "http://localhost:8080/api/v1/temperatures";
-    const [temperatures, setTemperatures] = useState(null);
+    const [temperatures, setTemperatures] = useState([]);
     const [loading, setLoading] = useState(true);
     const [temperatureId, setTemperatureId] = useState(null);
     const [responseTemperature, setResponseTemperature] = useState(null);
@@ -55,7 +55,8 @@ const TableOriginal = ({ temperature }) => {
                     {/* data */}
                     <tbody>
 
-                    {temperatures?.map(temperature => (
+                    {/* get data from backend database */}
+                    {temperatures.slice(-1000)?.map(temperature => (
                         <tr key={temperature.id}>
                             <td>{temperature.deviceUUID}</td>
                             <td>{temperature.dataType}</td>

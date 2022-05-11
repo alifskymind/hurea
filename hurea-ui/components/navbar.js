@@ -34,9 +34,8 @@ export default function Navbar() {
                     {/* submenu for tables */}
                     <ul className="p-2 bg-base-100">
 
-
                         {/* button to tableOriginalPage */}
-                        <Link href="/tableOriginalPage" passHref>
+                        <Link href="/reactTablePaginationPage" passHref>
 
                             <li><a>Original Data</a></li>
 

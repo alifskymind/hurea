@@ -25,15 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/tableOriginalPage": [
+    "/reactTablePaginationPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tableOriginalPage.js"
+      "static/chunks/pages/reactTablePaginationPage.js"
     ],
-    "/testApiBackendTemperatureTable": [
+    "/tablePredictedPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/testApiBackendTemperatureTable.js"
+      "static/chunks/pages/tablePredictedPage.js"
     ]
   },
   "ampFirstPages": []
