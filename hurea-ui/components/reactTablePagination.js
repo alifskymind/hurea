@@ -74,43 +74,43 @@ function ReactTablePagination() {
 
             <thead>
 
-            {headerGroups.map(headerGroup => (
+                {headerGroups.map(headerGroup => (
 
-                <tr {...headerGroup.getHeaderGroupProps()}>
+                    <tr {...headerGroup.getHeaderGroupProps()}>
 
-                {headerGroup.headers.map(column => (
+                    {headerGroup.headers.map(column => (
 
-                    <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                        <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+
+                    ))}
+
+                    </tr>
 
                 ))}
-
-                </tr>
-
-            ))}
 
             </thead>
 
             <tbody {...getTableBodyProps()}>
 
-            {page.map((row, i) => {
+                {page.map((row, i) => {
 
-                prepareRow(row)
+                    prepareRow(row)
 
-                return (
+                    return (
 
-                <tr {...row.getRowProps()}>
+                        <tr {...row.getRowProps()}>
 
-                    {row.cells.map(cell => {
+                            {row.cells.map(cell => {
 
-                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
 
-                    })}
+                            })}
 
-                </tr>
+                        </tr>
 
-                )
+                    )
 
-            })}
+                })}
 
             </tbody>
 
@@ -121,85 +121,85 @@ function ReactTablePagination() {
 
             <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
 
-            {'<<'}
+                {'<<'}
 
             </button>{' '}
 
             <button onClick={() => previousPage()} disabled={!canPreviousPage}>
 
-            {'<'}
+                {'<'}
 
             </button>{' '}
 
             <button onClick={() => nextPage()} disabled={!canNextPage}>
 
-            {'>'}
+                {'>'}
 
             </button>{' '}
 
             <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
 
-            {'>>'}
+                {'>>'}
 
             </button>{' '}
 
             <span>
 
-            Page{' '}
+                Page{' '}
 
-            <strong>
+                <strong>
 
-                {pageIndex + 1} of {pageOptions.length}
+                    {pageIndex + 1} of {pageOptions.length}
 
-            </strong>{' '}
+                </strong>{' '}
 
             </span>
 
             <span>
 
-            | Go to page:{' '}
+                | Go to page:{' '}
 
-            <input
+                <input
 
-                type="number"
+                    type="number"
 
-                defaultValue={pageIndex + 1}
+                    defaultValue={pageIndex + 1}
 
-                onChange={e => {
+                    onChange={e => {
 
-                const page = e.target.value ? Number(e.target.value) - 1 : 0
+                    const page = e.target.value ? Number(e.target.value) - 1 : 0
 
-                gotoPage(page)
+                    gotoPage(page)
 
-                }}
+                    }}
 
-                style={{ width: '100px' }}
+                    style={{ width: '100px' }}
 
-            />
+                />
 
             </span>{' '}
 
             <select
 
-            value={pageSize}
+                value={pageSize}
 
-            onChange={e => {
+                onChange={e => {
 
-                setPageSize(Number(e.target.value))
+                    setPageSize(Number(e.target.value))
 
-            }}
+                }}
 
-            >
+                >
 
-            {[10, 20, 30, 40, 50].map(pageSize => (
+                {[10, 20, 30, 40, 50].map(pageSize => (
 
-                <option key={pageSize} value={pageSize}>
+                    <option key={pageSize} value={pageSize}>
 
-                Show {pageSize}
+                        Show {pageSize}
 
-                </option>
+                    </option>
 
-            ))}
+                ))}
 
             </select>
 
