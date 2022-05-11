@@ -1,41 +1,82 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { useTable, usePagination } from 'react-table';
 import DATA from '../public/temperature-all-withid.json';
 
+
 function ReactTablePagination() {
 
-    // define columns
+    // fetch data from database using rest api
+    const [tableData, setTableData] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:8080/api/v1/temperatures")
+            .then((data) => data.json())
+            .then((data) => setTableData(data))
+    }, [])
+    // view data on web browser console
+    // console.log(tableData)
+
+
+    // define columns from json file
+    // const COLUMNS = [
+    //     {
+    //         Header: 'id',
+    //         accessor: 'id',
+    //     },
+    //     {
+    //         Header: 'device_uuid',
+    //         accessor: 'device_uuid',
+    //     },
+    //     {
+    //         Header: 'data_type',
+    //         accessor: 'data_type',
+    //     },
+    //     {
+    //         Header: 'unix_timestamp',
+    //         accessor: 'unix_timestamp',
+    //     },
+    //     {
+    //         Header: 'date_time',
+    //         accessor: 'date_time',
+    //     },
+    //     {
+    //         Header: 'temperature_in_c',
+    //         accessor: 'temperature_in_c',
+    //     },
+    // ];
+
+    // define columns from database
     const COLUMNS = [
         {
             Header: 'id',
             accessor: 'id',
         },
         {
-            Header: 'device_uuid',
-            accessor: 'device_uuid',
+            Header: 'deviceUUID',
+            accessor: 'deviceUUID',
         },
         {
-            Header: 'data_type',
-            accessor: 'data_type',
+            Header: 'dataType',
+            accessor: 'dataType',
         },
         {
-            Header: 'unix_timestamp',
-            accessor: 'unix_timestamp',
+            Header: 'unixTimestamp',
+            accessor: 'unixTimestamp',
         },
         {
-            Header: 'date_time',
-            accessor: 'date_time',
+            Header: 'dateTime',
+            accessor: 'dateTime',
         },
         {
-            Header: 'temperature_in_c',
-            accessor: 'temperature_in_c',
+            Header: 'temperatureInC',
+            accessor: 'temperatureInC',
         },
-
     ];
 
     // set columns and data for table
     const columns = useMemo(() => COLUMNS, []);
-    const data = useMemo(() => DATA, []);
+    // get data from json file
+    // const data = useMemo(() => DATA, []);
 
     // Use the state and functions returned from useTable to build your UI
     const {
@@ -60,7 +101,13 @@ function ReactTablePagination() {
     } = useTable(
     {
         columns,
-        data,
+
+        // get data from json file
+        // data,
+
+        // get data from database
+        data: tableData,
+
         initialState: { pageIndex: 0 },
     },
         usePagination

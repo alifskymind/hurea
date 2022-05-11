@@ -53,7 +53,7 @@ export default function Login() {
                     <div class="max-w-md space-x-2">
 
                         {/* temporary button to go to table page */}
-                        <Link href="/tableOriginalPage" passHref>
+                        <Link href="/reactTablePaginationPage" passHref>
 
                             <button class="btn btn-primary">Login</button>
 

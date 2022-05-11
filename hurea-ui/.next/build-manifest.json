@@ -29,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/reactTablePaginationPage.js"
-    ],
-    "/tablePredictedPage": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tablePredictedPage.js"
     ]
   },
   "ampFirstPages": []
