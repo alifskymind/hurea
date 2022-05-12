@@ -15,6 +15,11 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -25,10 +30,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/insertCustomDataPage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/insertCustomDataPage.js"
+    ],
     "/reactTablePaginationPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/reactTablePaginationPage.js"
+    ],
+    "/tablePredictedPage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tablePredictedPage.js"
     ]
   },
   "ampFirstPages": []
