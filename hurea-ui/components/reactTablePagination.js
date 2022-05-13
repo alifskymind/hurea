@@ -2,7 +2,6 @@ import React, { useMemo, useState, useEffect } from 'react';
 import { useTable, usePagination } from 'react-table';
 import DATA from '../public/temperature-all-withid.json';
 
-
 function ReactTablePagination() {
 
     // fetch data from database using rest api
@@ -15,35 +14,6 @@ function ReactTablePagination() {
     }, [])
     // view data on web browser console
     // console.log(tableData)
-
-
-    // define columns from json file
-    // const COLUMNS = [
-    //     {
-    //         Header: 'id',
-    //         accessor: 'id',
-    //     },
-    //     {
-    //         Header: 'device_uuid',
-    //         accessor: 'device_uuid',
-    //     },
-    //     {
-    //         Header: 'data_type',
-    //         accessor: 'data_type',
-    //     },
-    //     {
-    //         Header: 'unix_timestamp',
-    //         accessor: 'unix_timestamp',
-    //     },
-    //     {
-    //         Header: 'date_time',
-    //         accessor: 'date_time',
-    //     },
-    //     {
-    //         Header: 'temperature_in_c',
-    //         accessor: 'temperature_in_c',
-    //     },
-    // ];
 
     // define columns from database
     const COLUMNS = [
@@ -108,7 +78,7 @@ function ReactTablePagination() {
         // get data from database
         data: tableData,
 
-        initialState: { pageIndex: 0 },
+        initialState: { pageIndex: 0, pageSize: 30 },
     },
         usePagination
     )

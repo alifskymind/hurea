@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/navbar'
 import ReactTablePagination from '../components/reactTablePagination'
+import TestSwrTable from "../components/testSwrTable"
 
 function ReactTablePaginationPage() {
 
@@ -10,6 +11,8 @@ function ReactTablePaginationPage() {
 
         <Navbar/>
         <ReactTablePagination/>
+
+        {/* <TestSwrTable/> */}
 
     </div>
 
